@@ -1,0 +1,1732 @@
+
+SD card.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000009ec  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         000000a0  00800060  000009ec  00000a80  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          0000020e  00800100  00800100  00000b20  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000b20  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  00000b50  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000110  00000000  00000000  00000b8c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   00001265  00000000  00000000  00000c9c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000594  00000000  00000000  00001f01  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000005f8  00000000  00000000  00002495  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000308  00000000  00000000  00002a90  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000039d  00000000  00000000  00002d98  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000d63  00000000  00000000  00003135  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 000000e8  00000000  00000000  00003e98  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 6f 00 	jmp	0xde	; 0xde <__ctors_end>
+   4:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+   8:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+   c:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  10:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  14:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  18:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  1c:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  20:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  24:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  28:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  2c:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  30:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  34:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  38:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  3c:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  40:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  44:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  48:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  4c:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+  50:	0c 94 8c 00 	jmp	0x118	; 0x118 <__bad_interrupt>
+
+00000054 <__trampolines_end>:
+  54:	63 61       	ori	r22, 0x13	; 19
+  56:	72 64       	ori	r23, 0x42	; 66
+  58:	20 6e       	ori	r18, 0xE0	; 224
+  5a:	6f 74       	andi	r22, 0x4F	; 79
+  5c:	20 69       	ori	r18, 0x90	; 144
+  5e:	6e 69       	ori	r22, 0x9E	; 158
+  60:	74 69       	ori	r23, 0x94	; 148
+  62:	61 6c       	ori	r22, 0xC1	; 193
+  64:	69 7a       	andi	r22, 0xA9	; 169
+  66:	65 64       	ori	r22, 0x45	; 69
+	...
+
+00000069 <__c.1867>:
+  69:	63 61 72 64 20 69 6e 69 74 69 61 6c 69 7a 65 64     card initialized
+	...
+
+0000007a <__c.1865>:
+  7a:	2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a     ****************
+  8a:	2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a     ****************
+  9a:	2a 2a 2a 00                                         ***.
+
+0000009e <__c.1863>:
+  9e:	55 41 52 54 20 43 6f 6d 6d 75 6e 69 63 61 74 69     UART Communicati
+  ae:	6f 6e 20 4f 4b 21 21 21 21 21 2e 00                 on OK!!!!!..
+
+000000ba <__c.1861>:
+  ba:	2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a     ****************
+  ca:	2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a 2a     ****************
+  da:	2a 2a 2a 00                                         ***.
+
+000000de <__ctors_end>:
+  de:	11 24       	eor	r1, r1
+  e0:	1f be       	out	0x3f, r1	; 63
+  e2:	cf e5       	ldi	r28, 0x5F	; 95
+  e4:	d8 e0       	ldi	r29, 0x08	; 8
+  e6:	de bf       	out	0x3e, r29	; 62
+  e8:	cd bf       	out	0x3d, r28	; 61
+
+000000ea <__do_copy_data>:
+  ea:	11 e0       	ldi	r17, 0x01	; 1
+  ec:	a0 e6       	ldi	r26, 0x60	; 96
+  ee:	b0 e0       	ldi	r27, 0x00	; 0
+  f0:	ec ee       	ldi	r30, 0xEC	; 236
+  f2:	f9 e0       	ldi	r31, 0x09	; 9
+  f4:	02 c0       	rjmp	.+4      	; 0xfa <__do_copy_data+0x10>
+  f6:	05 90       	lpm	r0, Z+
+  f8:	0d 92       	st	X+, r0
+  fa:	a0 30       	cpi	r26, 0x00	; 0
+  fc:	b1 07       	cpc	r27, r17
+  fe:	d9 f7       	brne	.-10     	; 0xf6 <__do_copy_data+0xc>
+
+00000100 <__do_clear_bss>:
+ 100:	23 e0       	ldi	r18, 0x03	; 3
+ 102:	a0 e0       	ldi	r26, 0x00	; 0
+ 104:	b1 e0       	ldi	r27, 0x01	; 1
+ 106:	01 c0       	rjmp	.+2      	; 0x10a <.do_clear_bss_start>
+
+00000108 <.do_clear_bss_loop>:
+ 108:	1d 92       	st	X+, r1
+
+0000010a <.do_clear_bss_start>:
+ 10a:	ae 30       	cpi	r26, 0x0E	; 14
+ 10c:	b2 07       	cpc	r27, r18
+ 10e:	e1 f7       	brne	.-8      	; 0x108 <.do_clear_bss_loop>
+ 110:	0e 94 f1 01 	call	0x3e2	; 0x3e2 <main>
+ 114:	0c 94 f4 04 	jmp	0x9e8	; 0x9e8 <_exit>
+
+00000118 <__bad_interrupt>:
+ 118:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+0000011c <port_init>:
+#include "UART_routines.h"
+unsigned int last_secnum;
+
+void port_init(void)
+{
+PORTA = 0x00;
+ 11c:	1b ba       	out	0x1b, r1	; 27
+DDRA  = 0x00;
+ 11e:	1a ba       	out	0x1a, r1	; 26
+//PORTB = 0xEF;
+PORTB = 0x40;
+ 120:	80 e4       	ldi	r24, 0x40	; 64
+ 122:	88 bb       	out	0x18, r24	; 24
+DDRB  = 0xBF;    //MISO line i/p, rest o/p
+ 124:	8f eb       	ldi	r24, 0xBF	; 191
+ 126:	87 bb       	out	0x17, r24	; 23
+PORTC = 0x00;
+ 128:	15 ba       	out	0x15, r1	; 21
+DDRC  = 0xFF;
+ 12a:	8f ef       	ldi	r24, 0xFF	; 255
+ 12c:	84 bb       	out	0x14, r24	; 20
+PORTD = 0x00;
+ 12e:	12 ba       	out	0x12, r1	; 18
+DDRD  = 0xFE;
+ 130:	8e ef       	ldi	r24, 0xFE	; 254
+ 132:	81 bb       	out	0x11, r24	; 17
+ 134:	08 95       	ret
+
+00000136 <uart0_init>:
+}
+
+void uart0_init(void)
+{
+ unsigned int baudrate_value=103;
+ UBRRL=baudrate_value;                             //Loading the baud rate generator registers
+ 136:	87 e6       	ldi	r24, 0x67	; 103
+ 138:	89 b9       	out	0x09, r24	; 9
+ UBRRH=(baudrate_value>>8);
+ 13a:	10 bc       	out	0x20, r1	; 32
+
+ UCSRB=(1<<TXEN)|(1<<RXEN);                       //Enabling transmission and reception
+ 13c:	88 e1       	ldi	r24, 0x18	; 24
+ 13e:	8a b9       	out	0x0a, r24	; 10
+
+ UCSRC=(1<<URSEL)|(3<<UCSZ0);                    //accessing the UCSRC register and selecting 8 bit data format
+ 140:	86 e8       	ldi	r24, 0x86	; 134
+ 142:	80 bd       	out	0x20, r24	; 32
+ 144:	08 95       	ret
+
+00000146 <init_devices>:
+}
+
+//call this routine to initialize all peripherals
+void init_devices(void)
+{
+ cli();
+ 146:	f8 94       	cli
+ port_init();
+ 148:	0e 94 8e 00 	call	0x11c	; 0x11c <port_init>
+ spi_init();
+ 14c:	0e 94 8e 03 	call	0x71c	; 0x71c <spi_init>
+ uart0_init();
+ 150:	0e 94 9b 00 	call	0x136	; 0x136 <uart0_init>
+
+ MCUCR = 0x00;
+ 154:	15 be       	out	0x35, r1	; 53
+ GICR  = 0x00;
+ 156:	1b be       	out	0x3b, r1	; 59
+ TIMSK = 0x00; //timer interrupt sources
+ 158:	19 be       	out	0x39, r1	; 57
+ 15a:	08 95       	ret
+
+0000015c <SD_write>:
+}
+
+/* function to write into the card from last written sector*/
+
+void SD_write(unsigned char *ptr)
+{
+ 15c:	0f 93       	push	r16
+ 15e:	1f 93       	push	r17
+ 160:	ac 01       	movw	r20, r24
+	static unsigned  int Sect_num=2;
+    Card_write(Sect_num,ptr,1);
+ 162:	60 91 66 00 	lds	r22, 0x0066
+ 166:	70 91 67 00 	lds	r23, 0x0067
+ 16a:	80 e0       	ldi	r24, 0x00	; 0
+ 16c:	90 e0       	ldi	r25, 0x00	; 0
+ 16e:	01 e0       	ldi	r16, 0x01	; 1
+ 170:	10 e0       	ldi	r17, 0x00	; 0
+ 172:	20 e0       	ldi	r18, 0x00	; 0
+ 174:	30 e0       	ldi	r19, 0x00	; 0
+ 176:	0e 94 b0 02 	call	0x560	; 0x560 <Card_write>
+	Sect_num++;
+ 17a:	80 91 66 00 	lds	r24, 0x0066
+ 17e:	90 91 67 00 	lds	r25, 0x0067
+ 182:	01 96       	adiw	r24, 0x01	; 1
+ 184:	90 93 67 00 	sts	0x0067, r25
+ 188:	80 93 66 00 	sts	0x0066, r24
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+ 18c:	2f ef       	ldi	r18, 0xFF	; 255
+ 18e:	80 e7       	ldi	r24, 0x70	; 112
+ 190:	92 e0       	ldi	r25, 0x02	; 2
+ 192:	21 50       	subi	r18, 0x01	; 1
+ 194:	80 40       	sbci	r24, 0x00	; 0
+ 196:	90 40       	sbci	r25, 0x00	; 0
+ 198:	e1 f7       	brne	.-8      	; 0x192 <SD_write+0x36>
+ 19a:	00 c0       	rjmp	.+0      	; 0x19c <SD_write+0x40>
+ 19c:	00 00       	nop
+	_delay_ms(50);
+	last_secnum=Sect_num;
+ 19e:	80 91 66 00 	lds	r24, 0x0066
+ 1a2:	90 91 67 00 	lds	r25, 0x0067
+ 1a6:	90 93 09 03 	sts	0x0309, r25
+ 1aa:	80 93 08 03 	sts	0x0308, r24
+}
+ 1ae:	1f 91       	pop	r17
+ 1b0:	0f 91       	pop	r16
+ 1b2:	08 95       	ret
+
+000001b4 <Enter_string>:
+
+
+/* reads string from uart and write int the card  to next sector after the last written*/
+
+void Enter_string()
+{
+ 1b4:	cf 92       	push	r12
+ 1b6:	df 92       	push	r13
+ 1b8:	ef 92       	push	r14
+ 1ba:	ff 92       	push	r15
+ 1bc:	0f 93       	push	r16
+ 1be:	1f 93       	push	r17
+ 1c0:	cf 93       	push	r28
+ 1c2:	df 93       	push	r29
+unsigned char *ptr;
+unsigned int i;
+ptr=(char *)malloc(512*sizeof(char));
+ 1c4:	80 e0       	ldi	r24, 0x00	; 0
+ 1c6:	92 e0       	ldi	r25, 0x02	; 2
+ 1c8:	0e 94 c7 03 	call	0x78e	; 0x78e <malloc>
+ 1cc:	7c 01       	movw	r14, r24
+transmitString("\r\n enter the string ending with ~ \r\n");
+ 1ce:	88 e6       	ldi	r24, 0x68	; 104
+ 1d0:	90 e0       	ldi	r25, 0x00	; 0
+ 1d2:	0e 94 b8 03 	call	0x770	; 0x770 <transmitString>
+ 1d6:	87 01       	movw	r16, r14
+for(i=0;i<512;i++)
+ 1d8:	c0 e0       	ldi	r28, 0x00	; 0
+ 1da:	d0 e0       	ldi	r29, 0x00	; 0
+{
+*(ptr+i)=receiveByte();
+ 1dc:	0e 94 9c 03 	call	0x738	; 0x738 <receiveByte>
+ 1e0:	68 01       	movw	r12, r16
+ 1e2:	f8 01       	movw	r30, r16
+ 1e4:	81 93       	st	Z+, r24
+ 1e6:	8f 01       	movw	r16, r30
+transmitByte(*(ptr+i));
+ 1e8:	0e 94 a1 03 	call	0x742	; 0x742 <transmitByte>
+if(*(ptr+i)=='~')
+ 1ec:	f6 01       	movw	r30, r12
+ 1ee:	90 81       	ld	r25, Z
+ 1f0:	9e 37       	cpi	r25, 0x7E	; 126
+ 1f2:	29 f0       	breq	.+10     	; 0x1fe <Enter_string+0x4a>
+{
+unsigned char *ptr;
+unsigned int i;
+ptr=(char *)malloc(512*sizeof(char));
+transmitString("\r\n enter the string ending with ~ \r\n");
+for(i=0;i<512;i++)
+ 1f4:	21 96       	adiw	r28, 0x01	; 1
+ 1f6:	c1 15       	cp	r28, r1
+ 1f8:	f2 e0       	ldi	r31, 0x02	; 2
+ 1fa:	df 07       	cpc	r29, r31
+ 1fc:	79 f7       	brne	.-34     	; 0x1dc <Enter_string+0x28>
+*(ptr+i)=receiveByte();
+transmitByte(*(ptr+i));
+if(*(ptr+i)=='~')
+break;	
+}
+*(ptr+i)='\0';
+ 1fe:	ce 0d       	add	r28, r14
+ 200:	df 1d       	adc	r29, r15
+ 202:	18 82       	st	Y, r1
+SD_write(ptr);     //function call to write into SD card
+ 204:	c7 01       	movw	r24, r14
+ 206:	0e 94 ae 00 	call	0x15c	; 0x15c <SD_write>
+free(ptr);
+ 20a:	c7 01       	movw	r24, r14
+ 20c:	0e 94 5c 04 	call	0x8b8	; 0x8b8 <free>
+}
+ 210:	df 91       	pop	r29
+ 212:	cf 91       	pop	r28
+ 214:	1f 91       	pop	r17
+ 216:	0f 91       	pop	r16
+ 218:	ff 90       	pop	r15
+ 21a:	ef 90       	pop	r14
+ 21c:	df 90       	pop	r13
+ 21e:	cf 90       	pop	r12
+ 220:	08 95       	ret
+
+00000222 <Read_string>:
+
+/*functi0n which reads the SD card from sect 2 to last written sector*/
+void Read_string()
+{
+ 222:	ef 92       	push	r14
+ 224:	ff 92       	push	r15
+ 226:	0f 93       	push	r16
+ 228:	1f 93       	push	r17
+ 22a:	cf 93       	push	r28
+ 22c:	df 93       	push	r29
+unsigned char *str;
+unsigned int i;
+str=(char *)malloc(512*sizeof(char));
+ 22e:	80 e0       	ldi	r24, 0x00	; 0
+ 230:	92 e0       	ldi	r25, 0x02	; 2
+ 232:	0e 94 c7 03 	call	0x78e	; 0x78e <malloc>
+ 236:	7c 01       	movw	r14, r24
+for(i=2;i<last_secnum;i++)
+ 238:	80 91 08 03 	lds	r24, 0x0308
+ 23c:	90 91 09 03 	lds	r25, 0x0309
+ 240:	03 97       	sbiw	r24, 0x03	; 3
+ 242:	d8 f0       	brcs	.+54     	; 0x27a <Read_string+0x58>
+ 244:	c2 e0       	ldi	r28, 0x02	; 2
+ 246:	d0 e0       	ldi	r29, 0x00	; 0
+{
+Card_read(i,str,1);
+ 248:	be 01       	movw	r22, r28
+ 24a:	80 e0       	ldi	r24, 0x00	; 0
+ 24c:	90 e0       	ldi	r25, 0x00	; 0
+ 24e:	01 e0       	ldi	r16, 0x01	; 1
+ 250:	10 e0       	ldi	r17, 0x00	; 0
+ 252:	20 e0       	ldi	r18, 0x00	; 0
+ 254:	30 e0       	ldi	r19, 0x00	; 0
+ 256:	a7 01       	movw	r20, r14
+ 258:	0e 94 4e 03 	call	0x69c	; 0x69c <Card_read>
+transmitString("\r\n");
+ 25c:	8a e8       	ldi	r24, 0x8A	; 138
+ 25e:	90 e0       	ldi	r25, 0x00	; 0
+ 260:	0e 94 b8 03 	call	0x770	; 0x770 <transmitString>
+transmitString(str);	
+ 264:	c7 01       	movw	r24, r14
+ 266:	0e 94 b8 03 	call	0x770	; 0x770 <transmitString>
+void Read_string()
+{
+unsigned char *str;
+unsigned int i;
+str=(char *)malloc(512*sizeof(char));
+for(i=2;i<last_secnum;i++)
+ 26a:	21 96       	adiw	r28, 0x01	; 1
+ 26c:	80 91 08 03 	lds	r24, 0x0308
+ 270:	90 91 09 03 	lds	r25, 0x0309
+ 274:	c8 17       	cp	r28, r24
+ 276:	d9 07       	cpc	r29, r25
+ 278:	38 f3       	brcs	.-50     	; 0x248 <Read_string+0x26>
+{
+Card_read(i,str,1);
+transmitString("\r\n");
+transmitString(str);	
+}
+free(str);
+ 27a:	c7 01       	movw	r24, r14
+ 27c:	0e 94 5c 04 	call	0x8b8	; 0x8b8 <free>
+}
+ 280:	df 91       	pop	r29
+ 282:	cf 91       	pop	r28
+ 284:	1f 91       	pop	r17
+ 286:	0f 91       	pop	r16
+ 288:	ff 90       	pop	r15
+ 28a:	ef 90       	pop	r14
+ 28c:	08 95       	ret
+
+0000028e <Write_sector>:
+
+
+/* function to write a specific sector preferably from 0-99 for simplification of code */
+void Write_sector()
+{   
+ 28e:	bf 92       	push	r11
+ 290:	cf 92       	push	r12
+ 292:	df 92       	push	r13
+ 294:	ef 92       	push	r14
+ 296:	ff 92       	push	r15
+ 298:	0f 93       	push	r16
+ 29a:	1f 93       	push	r17
+ 29c:	cf 93       	push	r28
+ 29e:	df 93       	push	r29
+	unsigned char sect_num,*ptr;
+	unsigned int i;
+	transmitString("Enter sector number 00-99");
+ 2a0:	8d e8       	ldi	r24, 0x8D	; 141
+ 2a2:	90 e0       	ldi	r25, 0x00	; 0
+ 2a4:	0e 94 b8 03 	call	0x770	; 0x770 <transmitString>
+	sect_num=(receiveByte()-48)*10;
+ 2a8:	0e 94 9c 03 	call	0x738	; 0x738 <receiveByte>
+ 2ac:	c8 2f       	mov	r28, r24
+	sect_num=sect_num|(receiveByte()-48);
+ 2ae:	0e 94 9c 03 	call	0x738	; 0x738 <receiveByte>
+void Write_sector()
+{   
+	unsigned char sect_num,*ptr;
+	unsigned int i;
+	transmitString("Enter sector number 00-99");
+	sect_num=(receiveByte()-48)*10;
+ 2b2:	9c 2f       	mov	r25, r28
+ 2b4:	99 0f       	add	r25, r25
+ 2b6:	90 56       	subi	r25, 0x60	; 96
+ 2b8:	69 2f       	mov	r22, r25
+ 2ba:	66 0f       	add	r22, r22
+ 2bc:	66 0f       	add	r22, r22
+ 2be:	69 0f       	add	r22, r25
+	sect_num=sect_num|(receiveByte()-48);
+ 2c0:	80 53       	subi	r24, 0x30	; 48
+ 2c2:	b6 2e       	mov	r11, r22
+ 2c4:	b8 2a       	or	r11, r24
+	transmitString("enter the string");
+ 2c6:	87 ea       	ldi	r24, 0xA7	; 167
+ 2c8:	90 e0       	ldi	r25, 0x00	; 0
+ 2ca:	0e 94 b8 03 	call	0x770	; 0x770 <transmitString>
+	ptr=(char *)malloc(512*sizeof(char));
+ 2ce:	80 e0       	ldi	r24, 0x00	; 0
+ 2d0:	92 e0       	ldi	r25, 0x02	; 2
+ 2d2:	0e 94 c7 03 	call	0x78e	; 0x78e <malloc>
+ 2d6:	7c 01       	movw	r14, r24
+	transmitString("\r\n enter the string ending with ~ \r\n");
+ 2d8:	88 e6       	ldi	r24, 0x68	; 104
+ 2da:	90 e0       	ldi	r25, 0x00	; 0
+ 2dc:	0e 94 b8 03 	call	0x770	; 0x770 <transmitString>
+ 2e0:	87 01       	movw	r16, r14
+	for(i=0;i<512;i++)
+ 2e2:	c0 e0       	ldi	r28, 0x00	; 0
+ 2e4:	d0 e0       	ldi	r29, 0x00	; 0
+	{
+		*(ptr+i)=receiveByte();
+ 2e6:	0e 94 9c 03 	call	0x738	; 0x738 <receiveByte>
+ 2ea:	68 01       	movw	r12, r16
+ 2ec:	f8 01       	movw	r30, r16
+ 2ee:	81 93       	st	Z+, r24
+ 2f0:	8f 01       	movw	r16, r30
+		transmitByte(*(ptr+i));
+ 2f2:	0e 94 a1 03 	call	0x742	; 0x742 <transmitByte>
+		if(*(ptr+i)=='~')
+ 2f6:	f6 01       	movw	r30, r12
+ 2f8:	90 81       	ld	r25, Z
+ 2fa:	9e 37       	cpi	r25, 0x7E	; 126
+ 2fc:	29 f0       	breq	.+10     	; 0x308 <Write_sector+0x7a>
+	sect_num=(receiveByte()-48)*10;
+	sect_num=sect_num|(receiveByte()-48);
+	transmitString("enter the string");
+	ptr=(char *)malloc(512*sizeof(char));
+	transmitString("\r\n enter the string ending with ~ \r\n");
+	for(i=0;i<512;i++)
+ 2fe:	21 96       	adiw	r28, 0x01	; 1
+ 300:	c1 15       	cp	r28, r1
+ 302:	f2 e0       	ldi	r31, 0x02	; 2
+ 304:	df 07       	cpc	r29, r31
+ 306:	79 f7       	brne	.-34     	; 0x2e6 <Write_sector+0x58>
+		*(ptr+i)=receiveByte();
+		transmitByte(*(ptr+i));
+		if(*(ptr+i)=='~')
+		break;
+	}
+	*(ptr+i)='\0';
+ 308:	ce 0d       	add	r28, r14
+ 30a:	df 1d       	adc	r29, r15
+ 30c:	18 82       	st	Y, r1
+	 Card_write(sect_num,ptr,1);
+ 30e:	6b 2d       	mov	r22, r11
+ 310:	70 e0       	ldi	r23, 0x00	; 0
+ 312:	80 e0       	ldi	r24, 0x00	; 0
+ 314:	90 e0       	ldi	r25, 0x00	; 0
+ 316:	01 e0       	ldi	r16, 0x01	; 1
+ 318:	10 e0       	ldi	r17, 0x00	; 0
+ 31a:	20 e0       	ldi	r18, 0x00	; 0
+ 31c:	30 e0       	ldi	r19, 0x00	; 0
+ 31e:	a7 01       	movw	r20, r14
+ 320:	0e 94 b0 02 	call	0x560	; 0x560 <Card_write>
+	 free(ptr);
+ 324:	c7 01       	movw	r24, r14
+ 326:	0e 94 5c 04 	call	0x8b8	; 0x8b8 <free>
+}
+ 32a:	df 91       	pop	r29
+ 32c:	cf 91       	pop	r28
+ 32e:	1f 91       	pop	r17
+ 330:	0f 91       	pop	r16
+ 332:	ff 90       	pop	r15
+ 334:	ef 90       	pop	r14
+ 336:	df 90       	pop	r13
+ 338:	cf 90       	pop	r12
+ 33a:	bf 90       	pop	r11
+ 33c:	08 95       	ret
+
+0000033e <Read_sector>:
+
+
+/* function to read a specific sector preferably from 0-99 for simplification of code */
+void Read_sector()
+{
+ 33e:	ef 92       	push	r14
+ 340:	ff 92       	push	r15
+ 342:	0f 93       	push	r16
+ 344:	1f 93       	push	r17
+ 346:	cf 93       	push	r28
+		unsigned char sect_num,*ptr;
+		unsigned int i;
+		transmitString("Enter sector number 00-99");
+ 348:	8d e8       	ldi	r24, 0x8D	; 141
+ 34a:	90 e0       	ldi	r25, 0x00	; 0
+ 34c:	0e 94 b8 03 	call	0x770	; 0x770 <transmitString>
+	    sect_num=(receiveByte()-48)*10;
+ 350:	0e 94 9c 03 	call	0x738	; 0x738 <receiveByte>
+ 354:	c8 2f       	mov	r28, r24
+	   sect_num=sect_num|(receiveByte()-48);
+ 356:	0e 94 9c 03 	call	0x738	; 0x738 <receiveByte>
+void Read_sector()
+{
+		unsigned char sect_num,*ptr;
+		unsigned int i;
+		transmitString("Enter sector number 00-99");
+	    sect_num=(receiveByte()-48)*10;
+ 35a:	9c 2f       	mov	r25, r28
+ 35c:	99 0f       	add	r25, r25
+ 35e:	90 56       	subi	r25, 0x60	; 96
+ 360:	69 2f       	mov	r22, r25
+ 362:	66 0f       	add	r22, r22
+ 364:	66 0f       	add	r22, r22
+ 366:	69 0f       	add	r22, r25
+	   sect_num=sect_num|(receiveByte()-48);
+ 368:	80 53       	subi	r24, 0x30	; 48
+ 36a:	c6 2f       	mov	r28, r22
+ 36c:	c8 2b       	or	r28, r24
+	   ptr=(char *)malloc(512*sizeof(char));
+ 36e:	80 e0       	ldi	r24, 0x00	; 0
+ 370:	92 e0       	ldi	r25, 0x02	; 2
+ 372:	0e 94 c7 03 	call	0x78e	; 0x78e <malloc>
+ 376:	7c 01       	movw	r14, r24
+	   Card_read(sect_num,ptr,1);
+ 378:	6c 2f       	mov	r22, r28
+ 37a:	70 e0       	ldi	r23, 0x00	; 0
+ 37c:	80 e0       	ldi	r24, 0x00	; 0
+ 37e:	90 e0       	ldi	r25, 0x00	; 0
+ 380:	01 e0       	ldi	r16, 0x01	; 1
+ 382:	10 e0       	ldi	r17, 0x00	; 0
+ 384:	20 e0       	ldi	r18, 0x00	; 0
+ 386:	30 e0       	ldi	r19, 0x00	; 0
+ 388:	a7 01       	movw	r20, r14
+ 38a:	0e 94 4e 03 	call	0x69c	; 0x69c <Card_read>
+	   transmitString("\r\n");
+ 38e:	8a e8       	ldi	r24, 0x8A	; 138
+ 390:	90 e0       	ldi	r25, 0x00	; 0
+ 392:	0e 94 b8 03 	call	0x770	; 0x770 <transmitString>
+	   transmitString(ptr);
+ 396:	c7 01       	movw	r24, r14
+ 398:	0e 94 b8 03 	call	0x770	; 0x770 <transmitString>
+}
+ 39c:	cf 91       	pop	r28
+ 39e:	1f 91       	pop	r17
+ 3a0:	0f 91       	pop	r16
+ 3a2:	ff 90       	pop	r15
+ 3a4:	ef 90       	pop	r14
+ 3a6:	08 95       	ret
+
+000003a8 <switch_operation>:
+void switch_operation()
+{
+
+	do
+	{
+		transmitString("Enter the operation\r\n1.Write \r\n2.Read \r\n3.Write sector \r\n4.Read Sector");
+ 3a8:	88 eb       	ldi	r24, 0xB8	; 184
+ 3aa:	90 e0       	ldi	r25, 0x00	; 0
+ 3ac:	0e 94 b8 03 	call	0x770	; 0x770 <transmitString>
+		switch(receiveByte())
+ 3b0:	0e 94 9c 03 	call	0x738	; 0x738 <receiveByte>
+ 3b4:	82 33       	cpi	r24, 0x32	; 50
+ 3b6:	61 f0       	breq	.+24     	; 0x3d0 <switch_operation+0x28>
+ 3b8:	18 f4       	brcc	.+6      	; 0x3c0 <switch_operation+0x18>
+ 3ba:	81 33       	cpi	r24, 0x31	; 49
+ 3bc:	31 f0       	breq	.+12     	; 0x3ca <switch_operation+0x22>
+ 3be:	f4 cf       	rjmp	.-24     	; 0x3a8 <switch_operation>
+ 3c0:	83 33       	cpi	r24, 0x33	; 51
+ 3c2:	49 f0       	breq	.+18     	; 0x3d6 <switch_operation+0x2e>
+ 3c4:	84 33       	cpi	r24, 0x34	; 52
+ 3c6:	51 f0       	breq	.+20     	; 0x3dc <switch_operation+0x34>
+ 3c8:	ef cf       	rjmp	.-34     	; 0x3a8 <switch_operation>
+		{
+			case '1':
+			Enter_string();
+ 3ca:	0e 94 da 00 	call	0x1b4	; 0x1b4 <Enter_string>
+			break;
+ 3ce:	ec cf       	rjmp	.-40     	; 0x3a8 <switch_operation>
+			case '2':
+			Read_string();
+ 3d0:	0e 94 11 01 	call	0x222	; 0x222 <Read_string>
+			break;
+ 3d4:	e9 cf       	rjmp	.-46     	; 0x3a8 <switch_operation>
+			case '3':
+			Write_sector();
+ 3d6:	0e 94 47 01 	call	0x28e	; 0x28e <Write_sector>
+			break;
+ 3da:	e6 cf       	rjmp	.-52     	; 0x3a8 <switch_operation>
+			case '4':
+			Read_sector();
+ 3dc:	0e 94 9f 01 	call	0x33e	; 0x33e <Read_sector>
+			break;
+ 3e0:	e3 cf       	rjmp	.-58     	; 0x3a8 <switch_operation>
+
+000003e2 <main>:
+ 3e2:	2f ef       	ldi	r18, 0xFF	; 255
+ 3e4:	81 ee       	ldi	r24, 0xE1	; 225
+ 3e6:	94 e0       	ldi	r25, 0x04	; 4
+ 3e8:	21 50       	subi	r18, 0x01	; 1
+ 3ea:	80 40       	sbci	r24, 0x00	; 0
+ 3ec:	90 40       	sbci	r25, 0x00	; 0
+ 3ee:	e1 f7       	brne	.-8      	; 0x3e8 <main+0x6>
+ 3f0:	00 c0       	rjmp	.+0      	; 0x3f2 <main+0x10>
+ 3f2:	00 00       	nop
+int main(void)
+{
+
+_delay_ms(100);  //delay for VCC stabilization
+
+init_devices();
+ 3f4:	0e 94 a3 00 	call	0x146	; 0x146 <init_devices>
+
+TX_NEWLINE;
+ 3f8:	8d e0       	ldi	r24, 0x0D	; 13
+ 3fa:	0e 94 a1 03 	call	0x742	; 0x742 <transmitByte>
+ 3fe:	8a e0       	ldi	r24, 0x0A	; 10
+ 400:	0e 94 a1 03 	call	0x742	; 0x742 <transmitByte>
+TX_NEWLINE;
+ 404:	8d e0       	ldi	r24, 0x0D	; 13
+ 406:	0e 94 a1 03 	call	0x742	; 0x742 <transmitByte>
+ 40a:	8a e0       	ldi	r24, 0x0A	; 10
+ 40c:	0e 94 a1 03 	call	0x742	; 0x742 <transmitByte>
+transmitString_F (PSTR("***********************************"));
+ 410:	8a eb       	ldi	r24, 0xBA	; 186
+ 412:	90 e0       	ldi	r25, 0x00	; 0
+ 414:	0e 94 a5 03 	call	0x74a	; 0x74a <transmitString_F>
+TX_NEWLINE;
+ 418:	8d e0       	ldi	r24, 0x0D	; 13
+ 41a:	0e 94 a1 03 	call	0x742	; 0x742 <transmitByte>
+ 41e:	8a e0       	ldi	r24, 0x0A	; 10
+ 420:	0e 94 a1 03 	call	0x742	; 0x742 <transmitByte>
+transmitString_F (PSTR("UART Communication OK!!!!!."));
+ 424:	8e e9       	ldi	r24, 0x9E	; 158
+ 426:	90 e0       	ldi	r25, 0x00	; 0
+ 428:	0e 94 a5 03 	call	0x74a	; 0x74a <transmitString_F>
+TX_NEWLINE;
+ 42c:	8d e0       	ldi	r24, 0x0D	; 13
+ 42e:	0e 94 a1 03 	call	0x742	; 0x742 <transmitByte>
+ 432:	8a e0       	ldi	r24, 0x0A	; 10
+ 434:	0e 94 a1 03 	call	0x742	; 0x742 <transmitByte>
+transmitString_F (PSTR("***********************************"));
+ 438:	8a e7       	ldi	r24, 0x7A	; 122
+ 43a:	90 e0       	ldi	r25, 0x00	; 0
+ 43c:	0e 94 a5 03 	call	0x74a	; 0x74a <transmitString_F>
+TX_NEWLINE;
+ 440:	8d e0       	ldi	r24, 0x0D	; 13
+ 442:	0e 94 a1 03 	call	0x742	; 0x742 <transmitByte>
+ 446:	8a e0       	ldi	r24, 0x0A	; 10
+ 448:	0e 94 a1 03 	call	0x742	; 0x742 <transmitByte>
+
+if(SD_init())                                       //initialises the SD card
+ 44c:	0e 94 5f 02 	call	0x4be	; 0x4be <SD_init>
+ 450:	88 23       	and	r24, r24
+ 452:	29 f0       	breq	.+10     	; 0x45e <main+0x7c>
+transmitString_F (PSTR("card initialized"));
+ 454:	89 e6       	ldi	r24, 0x69	; 105
+ 456:	90 e0       	ldi	r25, 0x00	; 0
+ 458:	0e 94 a5 03 	call	0x74a	; 0x74a <transmitString_F>
+ 45c:	04 c0       	rjmp	.+8      	; 0x466 <main+0x84>
+else
+transmitString_F (PSTR("card not initialized"));
+ 45e:	84 e5       	ldi	r24, 0x54	; 84
+ 460:	90 e0       	ldi	r25, 0x00	; 0
+ 462:	0e 94 a5 03 	call	0x74a	; 0x74a <transmitString_F>
+switch_operation();
+ 466:	0e 94 d4 01 	call	0x3a8	; 0x3a8 <switch_operation>
+
+0000046a <SD_sendCommand>:
+//Arguments: unsigned char (8-bit command value)
+// & unsigned long (32-bit command argument)
+//return: unsigned char; response byte
+//******************************************************************
+unsigned char SD_sendCommand(unsigned char cmd, unsigned long int arg,char CRC_bit)
+{
+ 46a:	ef 92       	push	r14
+ 46c:	ff 92       	push	r15
+ 46e:	0f 93       	push	r16
+ 470:	1f 93       	push	r17
+ 472:	cf 93       	push	r28
+ 474:	df 93       	push	r29
+ 476:	e8 2e       	mov	r14, r24
+ 478:	d4 2f       	mov	r29, r20
+ 47a:	15 2f       	mov	r17, r21
+ 47c:	06 2f       	mov	r16, r22
+ 47e:	f7 2e       	mov	r15, r23
+ 480:	c2 2f       	mov	r28, r18
+unsigned char response, retry=0;
+
+SD_CS_ASSERT;
+ 482:	c4 98       	cbi	0x18, 4	; 24
+
+SPI_transmit(0xFF);
+ 484:	8f ef       	ldi	r24, 0xFF	; 255
+ 486:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+SPI_transmit(cmd | 0x40); //send command, first two bits always '01'
+ 48a:	8e 2d       	mov	r24, r14
+ 48c:	80 64       	ori	r24, 0x40	; 64
+ 48e:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+SPI_transmit((unsigned char)(arg>>24));
+ 492:	8f 2d       	mov	r24, r15
+ 494:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+SPI_transmit((unsigned char)(arg>>16));
+ 498:	80 2f       	mov	r24, r16
+ 49a:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+SPI_transmit((unsigned char)(arg>>8));
+ 49e:	81 2f       	mov	r24, r17
+ 4a0:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+SPI_transmit((unsigned char)(arg));
+ 4a4:	8d 2f       	mov	r24, r29
+ 4a6:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+SPI_transmit(CRC_bit);
+ 4aa:	8c 2f       	mov	r24, r28
+ 4ac:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+}
+ 4b0:	df 91       	pop	r29
+ 4b2:	cf 91       	pop	r28
+ 4b4:	1f 91       	pop	r17
+ 4b6:	0f 91       	pop	r16
+ 4b8:	ff 90       	pop	r15
+ 4ba:	ef 90       	pop	r14
+ 4bc:	08 95       	ret
+
+000004be <SD_init>:
+//Arguments: none
+//return: unsigned char; will be 0 if no error,
+// otherwise the response byte will be sent
+//******************************************************************
+unsigned char SD_init(void)
+{
+ 4be:	cf 93       	push	r28
+ 4c0:	df 93       	push	r29
+unsigned char i, response=0x00, retry=0 ;
+
+SD_CS_DEASSERT;
+ 4c2:	c4 9a       	sbi	0x18, 4	; 24
+PORTB|=(1<<5);
+ 4c4:	c5 9a       	sbi	0x18, 5	; 24
+ 4c6:	ca e0       	ldi	r28, 0x0A	; 10
+for(i=0;i<10;i++)
+SPI_transmit(0xFF);
+ 4c8:	8f ef       	ldi	r24, 0xFF	; 255
+ 4ca:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+ 4ce:	c1 50       	subi	r28, 0x01	; 1
+{
+unsigned char i, response=0x00, retry=0 ;
+
+SD_CS_DEASSERT;
+PORTB|=(1<<5);
+for(i=0;i<10;i++)
+ 4d0:	d9 f7       	brne	.-10     	; 0x4c8 <SD_init+0xa>
+SPI_transmit(0xFF);
+SD_CS_ASSERT;
+ 4d2:	c4 98       	cbi	0x18, 4	; 24
+retry=0;
+	
+SD_sendCommand(0,0,0x95);
+ 4d4:	25 e9       	ldi	r18, 0x95	; 149
+ 4d6:	40 e0       	ldi	r20, 0x00	; 0
+ 4d8:	50 e0       	ldi	r21, 0x00	; 0
+ 4da:	ba 01       	movw	r22, r20
+ 4dc:	80 e0       	ldi	r24, 0x00	; 0
+ 4de:	0e 94 35 02 	call	0x46a	; 0x46a <SD_sendCommand>
+do 
+{
+response=SPI_receive();
+ 4e2:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+ 4e6:	d8 2f       	mov	r29, r24
+
+retry++;
+ 4e8:	c1 e0       	ldi	r28, 0x01	; 1
+ 4ea:	0e c0       	rjmp	.+28     	; 0x508 <SD_init+0x4a>
+retry=0;
+	
+SD_sendCommand(0,0,0x95);
+do 
+{
+response=SPI_receive();
+ 4ec:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+ 4f0:	d8 2f       	mov	r29, r24
+
+retry++;
+ 4f2:	cf 5f       	subi	r28, 0xFF	; 255
+if(retry==2)
+ 4f4:	c2 30       	cpi	r28, 0x02	; 2
+ 4f6:	41 f4       	brne	.+16     	; 0x508 <SD_init+0x4a>
+{
+
+	retry=0;
+SD_sendCommand(0,0,0x95);	
+ 4f8:	25 e9       	ldi	r18, 0x95	; 149
+ 4fa:	40 e0       	ldi	r20, 0x00	; 0
+ 4fc:	50 e0       	ldi	r21, 0x00	; 0
+ 4fe:	ba 01       	movw	r22, r20
+ 500:	80 e0       	ldi	r24, 0x00	; 0
+ 502:	0e 94 35 02 	call	0x46a	; 0x46a <SD_sendCommand>
+
+retry++;
+if(retry==2)
+{
+
+	retry=0;
+ 506:	c0 e0       	ldi	r28, 0x00	; 0
+SD_sendCommand(0,0,0x95);	
+}
+} while (response!=0x01);
+ 508:	d1 30       	cpi	r29, 0x01	; 1
+ 50a:	81 f7       	brne	.-32     	; 0x4ec <SD_init+0x2e>
+	response=SPI_receive();
+	retry++;	
+	} while ((response!=0x01)&&(retry<10));
+
+SPI_receive();
+retry=0;
+ 50c:	d0 e0       	ldi	r29, 0x00	; 0
+if(response==0x01)
+{
+//transmitByte('c');
+//retry=0;
+do{
+	SD_sendCommand(0x77,  0 , 0xFF);
+ 50e:	2f ef       	ldi	r18, 0xFF	; 255
+ 510:	40 e0       	ldi	r20, 0x00	; 0
+ 512:	50 e0       	ldi	r21, 0x00	; 0
+ 514:	ba 01       	movw	r22, r20
+ 516:	87 e7       	ldi	r24, 0x77	; 119
+ 518:	0e 94 35 02 	call	0x46a	; 0x46a <SD_sendCommand>
+	response=SPI_receive();
+ 51c:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+	do 
+	{
+	response=SPI_receive();
+ 520:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+	retry++;	
+ 524:	cf 5f       	subi	r28, 0xFF	; 255
+	} while ((response!=0x01)&&(retry<10));
+ 526:	81 30       	cpi	r24, 0x01	; 1
+ 528:	11 f0       	breq	.+4      	; 0x52e <SD_init+0x70>
+ 52a:	ca 30       	cpi	r28, 0x0A	; 10
+ 52c:	c8 f3       	brcs	.-14     	; 0x520 <SD_init+0x62>
+
+SPI_receive();
+ 52e:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+retry=0;
+SD_sendCommand(0x69,  0x40000000 , 0xFF);
+ 532:	2f ef       	ldi	r18, 0xFF	; 255
+ 534:	40 e0       	ldi	r20, 0x00	; 0
+ 536:	50 e0       	ldi	r21, 0x00	; 0
+ 538:	60 e0       	ldi	r22, 0x00	; 0
+ 53a:	70 e4       	ldi	r23, 0x40	; 64
+ 53c:	89 e6       	ldi	r24, 0x69	; 105
+ 53e:	0e 94 35 02 	call	0x46a	; 0x46a <SD_sendCommand>
+response=SPI_receive();
+ 542:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+	response=SPI_receive();
+	retry++;	
+	} while ((response!=0x01)&&(retry<10));
+
+SPI_receive();
+retry=0;
+ 546:	cd 2f       	mov	r28, r29
+SD_sendCommand(0x69,  0x40000000 , 0xFF);
+response=SPI_receive();
+do
+{
+	response=SPI_receive();
+ 548:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+	retry++;
+ 54c:	cf 5f       	subi	r28, 0xFF	; 255
+} while ((response!=0x00)&&(retry<10));
+ 54e:	88 23       	and	r24, r24
+ 550:	19 f0       	breq	.+6      	; 0x558 <SD_init+0x9a>
+ 552:	ca 30       	cpi	r28, 0x0A	; 10
+ 554:	c9 f7       	brne	.-14     	; 0x548 <SD_init+0x8a>
+ 556:	db cf       	rjmp	.-74     	; 0x50e <SD_init+0x50>
+else 
+return 0;
+}
+else
+return 0;
+ }
+ 558:	81 e0       	ldi	r24, 0x01	; 1
+ 55a:	df 91       	pop	r29
+ 55c:	cf 91       	pop	r28
+ 55e:	08 95       	ret
+
+00000560 <Card_write>:
+
+
+
+
+void Card_write(unsigned long sector,unsigned char *str,unsigned long sector_count)
+{
+ 560:	4f 92       	push	r4
+ 562:	5f 92       	push	r5
+ 564:	6f 92       	push	r6
+ 566:	7f 92       	push	r7
+ 568:	8f 92       	push	r8
+ 56a:	9f 92       	push	r9
+ 56c:	af 92       	push	r10
+ 56e:	bf 92       	push	r11
+ 570:	cf 92       	push	r12
+ 572:	df 92       	push	r13
+ 574:	ef 92       	push	r14
+ 576:	ff 92       	push	r15
+ 578:	0f 93       	push	r16
+ 57a:	1f 93       	push	r17
+ 57c:	cf 93       	push	r28
+ 57e:	df 93       	push	r29
+ 580:	7a 01       	movw	r14, r20
+ 582:	28 01       	movw	r4, r16
+ 584:	39 01       	movw	r6, r18
+unsigned char response;
+unsigned long i,start_addr,n;
+start_addr=512*sector;	
+ 586:	ab 01       	movw	r20, r22
+ 588:	bc 01       	movw	r22, r24
+ 58a:	03 2e       	mov	r0, r19
+ 58c:	39 e0       	ldi	r19, 0x09	; 9
+ 58e:	44 0f       	add	r20, r20
+ 590:	55 1f       	adc	r21, r21
+ 592:	66 1f       	adc	r22, r22
+ 594:	77 1f       	adc	r23, r23
+ 596:	3a 95       	dec	r19
+ 598:	d1 f7       	brne	.-12     	; 0x58e <Card_write+0x2e>
+ 59a:	30 2d       	mov	r19, r0
+SD_sendCommand(25,start_addr,0xff);
+ 59c:	2f ef       	ldi	r18, 0xFF	; 255
+ 59e:	89 e1       	ldi	r24, 0x19	; 25
+ 5a0:	0e 94 35 02 	call	0x46a	; 0x46a <SD_sendCommand>
+while(response=SPI_receive());
+ 5a4:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+ 5a8:	81 11       	cpse	r24, r1
+ 5aa:	fc cf       	rjmp	.-8      	; 0x5a4 <Card_write+0x44>
+SPI_transmit(0xFF);
+ 5ac:	8f ef       	ldi	r24, 0xFF	; 255
+ 5ae:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+SPI_transmit(0xFF);
+ 5b2:	8f ef       	ldi	r24, 0xFF	; 255
+ 5b4:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+SPI_transmit(0b11111100);
+ 5b8:	8c ef       	ldi	r24, 0xFC	; 252
+ 5ba:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+for(i=0;i<sector_count;i++)	
+ 5be:	41 14       	cp	r4, r1
+ 5c0:	51 04       	cpc	r5, r1
+ 5c2:	61 04       	cpc	r6, r1
+ 5c4:	71 04       	cpc	r7, r1
+ 5c6:	e9 f4       	brne	.+58     	; 0x602 <Card_write+0xa2>
+ 5c8:	24 c0       	rjmp	.+72     	; 0x612 <Card_write+0xb2>
+{
+for(n=0;((n<512)&&(*str));n++)
+{
+	SPI_transmit(*str);
+ 5ca:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+	str++;	
+ 5ce:	7e 01       	movw	r14, r28
+SPI_transmit(0xFF);
+SPI_transmit(0xFF);
+SPI_transmit(0b11111100);
+for(i=0;i<sector_count;i++)	
+{
+for(n=0;((n<512)&&(*str));n++)
+ 5d0:	cc 15       	cp	r28, r12
+ 5d2:	dd 05       	cpc	r29, r13
+ 5d4:	21 f0       	breq	.+8      	; 0x5de <Card_write+0x7e>
+ 5d6:	89 91       	ld	r24, Y+
+ 5d8:	81 11       	cpse	r24, r1
+ 5da:	f7 cf       	rjmp	.-18     	; 0x5ca <Card_write+0x6a>
+ 5dc:	03 c0       	rjmp	.+6      	; 0x5e4 <Card_write+0x84>
+{
+	SPI_transmit(*str);
+	str++;	
+	
+}
+if(!(*str))
+ 5de:	88 81       	ld	r24, Y
+ 5e0:	81 11       	cpse	r24, r1
+ 5e2:	04 c0       	rjmp	.+8      	; 0x5ec <Card_write+0x8c>
+{
+SPI_transmit(*str);
+ 5e4:	80 e0       	ldi	r24, 0x00	; 0
+ 5e6:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+break;
+ 5ea:	13 c0       	rjmp	.+38     	; 0x612 <Card_write+0xb2>
+SD_sendCommand(25,start_addr,0xff);
+while(response=SPI_receive());
+SPI_transmit(0xFF);
+SPI_transmit(0xFF);
+SPI_transmit(0b11111100);
+for(i=0;i<sector_count;i++)	
+ 5ec:	ff ef       	ldi	r31, 0xFF	; 255
+ 5ee:	8f 1a       	sub	r8, r31
+ 5f0:	9f 0a       	sbc	r9, r31
+ 5f2:	af 0a       	sbc	r10, r31
+ 5f4:	bf 0a       	sbc	r11, r31
+ 5f6:	84 14       	cp	r8, r4
+ 5f8:	95 04       	cpc	r9, r5
+ 5fa:	a6 04       	cpc	r10, r6
+ 5fc:	b7 04       	cpc	r11, r7
+ 5fe:	21 f4       	brne	.+8      	; 0x608 <Card_write+0xa8>
+ 600:	08 c0       	rjmp	.+16     	; 0x612 <Card_write+0xb2>
+ 602:	81 2c       	mov	r8, r1
+ 604:	91 2c       	mov	r9, r1
+ 606:	54 01       	movw	r10, r8
+{
+for(n=0;((n<512)&&(*str));n++)
+ 608:	f7 01       	movw	r30, r14
+ 60a:	80 81       	ld	r24, Z
+ 60c:	81 11       	cpse	r24, r1
+ 60e:	2d c0       	rjmp	.+90     	; 0x66a <Card_write+0x10a>
+ 610:	e9 cf       	rjmp	.-46     	; 0x5e4 <Card_write+0x84>
+{
+SPI_transmit(*str);
+break;
+}
+}
+SPI_transmit(0xff);
+ 612:	8f ef       	ldi	r24, 0xFF	; 255
+ 614:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+SPI_transmit(0xff);
+ 618:	8f ef       	ldi	r24, 0xFF	; 255
+ 61a:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+response=SPI_receive();
+ 61e:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+ while ((response & 0b00011111) != 0x05)
+ 622:	98 2f       	mov	r25, r24
+ 624:	9f 71       	andi	r25, 0x1F	; 31
+ 626:	95 30       	cpi	r25, 0x05	; 5
+ 628:	31 f0       	breq	.+12     	; 0x636 <Card_write+0xd6>
+ {
+	response=SPI_receive();
+ 62a:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+}
+}
+SPI_transmit(0xff);
+SPI_transmit(0xff);
+response=SPI_receive();
+ while ((response & 0b00011111) != 0x05)
+ 62e:	98 2f       	mov	r25, r24
+ 630:	9f 71       	andi	r25, 0x1F	; 31
+ 632:	95 30       	cpi	r25, 0x05	; 5
+ 634:	d1 f7       	brne	.-12     	; 0x62a <Card_write+0xca>
+ {
+	response=SPI_receive();
+ }
+ while (response!= 0xff)
+ 636:	8f 3f       	cpi	r24, 0xFF	; 255
+ 638:	21 f0       	breq	.+8      	; 0x642 <Card_write+0xe2>
+ {
+response=SPI_receive();
+ 63a:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+response=SPI_receive();
+ while ((response & 0b00011111) != 0x05)
+ {
+	response=SPI_receive();
+ }
+ while (response!= 0xff)
+ 63e:	8f 3f       	cpi	r24, 0xFF	; 255
+ 640:	e1 f7       	brne	.-8      	; 0x63a <Card_write+0xda>
+ {
+response=SPI_receive();
+ }
+SPI_transmit(0xff);
+ 642:	8f ef       	ldi	r24, 0xFF	; 255
+ 644:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+SPI_transmit(0xff);
+ 648:	8f ef       	ldi	r24, 0xFF	; 255
+ 64a:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+SPI_transmit(0b11111101);                   //stop token
+ 64e:	8d ef       	ldi	r24, 0xFD	; 253
+ 650:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+response=SPI_receive();
+ 654:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+response=SPI_receive();
+ 658:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+ while (response!= 0xff)
+ 65c:	8f 3f       	cpi	r24, 0xFF	; 255
+ 65e:	69 f0       	breq	.+26     	; 0x67a <Card_write+0x11a>
+ {
+response=SPI_receive();
+ 660:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+SPI_transmit(0xff);
+SPI_transmit(0xff);
+SPI_transmit(0b11111101);                   //stop token
+response=SPI_receive();
+response=SPI_receive();
+ while (response!= 0xff)
+ 664:	8f 3f       	cpi	r24, 0xFF	; 255
+ 666:	e1 f7       	brne	.-8      	; 0x660 <Card_write+0x100>
+ 668:	08 c0       	rjmp	.+16     	; 0x67a <Card_write+0x11a>
+SPI_transmit(0b11111100);
+for(i=0;i<sector_count;i++)	
+{
+for(n=0;((n<512)&&(*str));n++)
+{
+	SPI_transmit(*str);
+ 66a:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+	str++;	
+ 66e:	e7 01       	movw	r28, r14
+ 670:	21 96       	adiw	r28, 0x01	; 1
+ 672:	67 01       	movw	r12, r14
+ 674:	fe ef       	ldi	r31, 0xFE	; 254
+ 676:	df 1a       	sub	r13, r31
+ 678:	ae cf       	rjmp	.-164    	; 0x5d6 <Card_write+0x76>
+response=SPI_receive();
+ while (response!= 0xff)
+ {
+response=SPI_receive();
+ }
+}
+ 67a:	df 91       	pop	r29
+ 67c:	cf 91       	pop	r28
+ 67e:	1f 91       	pop	r17
+ 680:	0f 91       	pop	r16
+ 682:	ff 90       	pop	r15
+ 684:	ef 90       	pop	r14
+ 686:	df 90       	pop	r13
+ 688:	cf 90       	pop	r12
+ 68a:	bf 90       	pop	r11
+ 68c:	af 90       	pop	r10
+ 68e:	9f 90       	pop	r9
+ 690:	8f 90       	pop	r8
+ 692:	7f 90       	pop	r7
+ 694:	6f 90       	pop	r6
+ 696:	5f 90       	pop	r5
+ 698:	4f 90       	pop	r4
+ 69a:	08 95       	ret
+
+0000069c <Card_read>:
+
+void Card_read(unsigned long sector, unsigned char* buffer,unsigned long sector_count)
+{
+ 69c:	0f 93       	push	r16
+ 69e:	1f 93       	push	r17
+ 6a0:	cf 93       	push	r28
+ 6a2:	df 93       	push	r29
+ 6a4:	8a 01       	movw	r16, r20
+	
+	unsigned long i, Start_Addr;
+	unsigned int n;
+	unsigned char response;
+    unsigned char *result=buffer;
+	Start_Addr = sector * 512;
+ 6a6:	ab 01       	movw	r20, r22
+ 6a8:	bc 01       	movw	r22, r24
+ 6aa:	03 2e       	mov	r0, r19
+ 6ac:	39 e0       	ldi	r19, 0x09	; 9
+ 6ae:	44 0f       	add	r20, r20
+ 6b0:	55 1f       	adc	r21, r21
+ 6b2:	66 1f       	adc	r22, r22
+ 6b4:	77 1f       	adc	r23, r23
+ 6b6:	3a 95       	dec	r19
+ 6b8:	d1 f7       	brne	.-12     	; 0x6ae <Card_read+0x12>
+ 6ba:	30 2d       	mov	r19, r0
+	SD_sendCommand(18, Start_Addr, 0xff);
+ 6bc:	2f ef       	ldi	r18, 0xFF	; 255
+ 6be:	82 e1       	ldi	r24, 0x12	; 18
+ 6c0:	0e 94 35 02 	call	0x46a	; 0x46a <SD_sendCommand>
+	{
+		response=SPI_receive();
+	}
+	while (response!= 0xfe)
+	{
+		response=SPI_receive();
+ 6c4:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+	SD_sendCommand(18, Start_Addr, 0xff);
+	while (response!= 0)
+	{
+		response=SPI_receive();
+	}
+	while (response!= 0xfe)
+ 6c8:	8e 3f       	cpi	r24, 0xFE	; 254
+ 6ca:	e1 f7       	brne	.-8      	; 0x6c4 <Card_read+0x28>
+ 6cc:	e8 01       	movw	r28, r16
+ 6ce:	1e 5f       	subi	r17, 0xFE	; 254
+		response=SPI_receive();
+	}                                                               // Add platform specific sector (512 bytes) read code here
+	                                                                       // Add platform specific sector (512 bytes) write code here
+		for (n = 0;n<512; n++)
+		{
+			response=SPI_receive();
+ 6d0:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+			*(buffer+n) =response;
+ 6d4:	89 93       	st	Y+, r24
+			if(!(*(buffer+n)))
+ 6d6:	88 23       	and	r24, r24
+ 6d8:	19 f0       	breq	.+6      	; 0x6e0 <Card_read+0x44>
+	while (response!= 0xfe)
+	{
+		response=SPI_receive();
+	}                                                               // Add platform specific sector (512 bytes) read code here
+	                                                                       // Add platform specific sector (512 bytes) write code here
+		for (n = 0;n<512; n++)
+ 6da:	c0 17       	cp	r28, r16
+ 6dc:	d1 07       	cpc	r29, r17
+ 6de:	c1 f7       	brne	.-16     	; 0x6d0 <Card_read+0x34>
+			if(!(*(buffer+n)))
+			break;
+			}
+		
+
+	SPI_transmit(0xff);
+ 6e0:	8f ef       	ldi	r24, 0xFF	; 255
+ 6e2:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+	SPI_transmit(0xff);
+ 6e6:	8f ef       	ldi	r24, 0xFF	; 255
+ 6e8:	0e 94 91 03 	call	0x722	; 0x722 <SPI_transmit>
+
+	SD_sendCommand(12, 0, 0xff);
+ 6ec:	2f ef       	ldi	r18, 0xFF	; 255
+ 6ee:	40 e0       	ldi	r20, 0x00	; 0
+ 6f0:	50 e0       	ldi	r21, 0x00	; 0
+ 6f2:	ba 01       	movw	r22, r20
+ 6f4:	8c e0       	ldi	r24, 0x0C	; 12
+ 6f6:	0e 94 35 02 	call	0x46a	; 0x46a <SD_sendCommand>
+	response=SPI_receive();
+ 6fa:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+	while (response!= 0)
+ 6fe:	88 23       	and	r24, r24
+ 700:	21 f0       	breq	.+8      	; 0x70a <Card_read+0x6e>
+	{
+		response=SPI_receive();
+ 702:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+	SPI_transmit(0xff);
+	SPI_transmit(0xff);
+
+	SD_sendCommand(12, 0, 0xff);
+	response=SPI_receive();
+	while (response!= 0)
+ 706:	81 11       	cpse	r24, r1
+ 708:	fc cf       	rjmp	.-8      	; 0x702 <Card_read+0x66>
+	{
+		response=SPI_receive();
+	}
+	while (response!= 0xff)
+	{
+		response=SPI_receive();
+ 70a:	0e 94 96 03 	call	0x72c	; 0x72c <SPI_receive>
+	response=SPI_receive();
+	while (response!= 0)
+	{
+		response=SPI_receive();
+	}
+	while (response!= 0xff)
+ 70e:	8f 3f       	cpi	r24, 0xFF	; 255
+ 710:	e1 f7       	brne	.-8      	; 0x70a <Card_read+0x6e>
+	{
+		response=SPI_receive();
+	}
+
+ 712:	df 91       	pop	r29
+ 714:	cf 91       	pop	r28
+ 716:	1f 91       	pop	r17
+ 718:	0f 91       	pop	r16
+ 71a:	08 95       	ret
+
+0000071c <spi_init>:
+
+//SPI initialize for SD card
+//clock rate: 125Khz
+void spi_init(void)
+{
+SPCR=(1<<SPE)|(1<<MSTR)|(1<<SPR0)|(1<<SPR1);	
+ 71c:	83 e5       	ldi	r24, 0x53	; 83
+ 71e:	8d b9       	out	0x0d, r24	; 13
+ 720:	08 95       	ret
+
+00000722 <SPI_transmit>:
+}
+
+unsigned char SPI_transmit(unsigned char data)
+{
+// Start transmission
+SPDR = data;
+ 722:	8f b9       	out	0x0f, r24	; 15
+
+// Wait for transmission complete
+while(!(SPSR & (1<<SPIF)));
+ 724:	77 9b       	sbis	0x0e, 7	; 14
+ 726:	fe cf       	rjmp	.-4      	; 0x724 <SPI_transmit+0x2>
+data = SPDR;
+ 728:	8f b1       	in	r24, 0x0f	; 15
+
+return(data);
+}
+ 72a:	08 95       	ret
+
+0000072c <SPI_receive>:
+unsigned char SPI_receive(void)
+{
+unsigned char data;
+// Wait for reception complete
+
+SPDR = 0xff;
+ 72c:	8f ef       	ldi	r24, 0xFF	; 255
+ 72e:	8f b9       	out	0x0f, r24	; 15
+while(!(SPSR & (1<<SPIF)));
+ 730:	77 9b       	sbis	0x0e, 7	; 14
+ 732:	fe cf       	rjmp	.-4      	; 0x730 <SPI_receive+0x4>
+data = SPDR;
+ 734:	8f b1       	in	r24, 0x0f	; 15
+
+// Return data register
+return data;
+}
+ 736:	08 95       	ret
+
+00000738 <receiveByte>:
+//*************************************************
+unsigned char receiveByte( void )
+{
+	unsigned char data, status;
+	
+	while(!(UCSRA & (1<<RXC))); 	// Wait for incomming data
+ 738:	5f 9b       	sbis	0x0b, 7	; 11
+ 73a:	fe cf       	rjmp	.-4      	; 0x738 <receiveByte>
+	
+	status = UCSRA;
+ 73c:	8b b1       	in	r24, 0x0b	; 11
+	data = UDR;
+ 73e:	8c b1       	in	r24, 0x0c	; 12
+	
+	return(data);
+}
+ 740:	08 95       	ret
+
+00000742 <transmitByte>:
+//***************************************************
+//Function to transmit a single byte
+//***************************************************
+void transmitByte( unsigned char data )
+{
+	while ( !(UCSRA & (1<<UDRE)) )
+ 742:	5d 9b       	sbis	0x0b, 5	; 11
+ 744:	fe cf       	rjmp	.-4      	; 0x742 <transmitByte>
+		; 			                /* Wait for empty transmit buffer */
+	UDR = data; 			        /* Start transmition */
+ 746:	8c b9       	out	0x0c, r24	; 12
+ 748:	08 95       	ret
+
+0000074a <transmitString_F>:
+
+//***************************************************
+//Function to transmit a string in Flash
+//***************************************************
+void transmitString_F(char* string)
+{
+ 74a:	cf 93       	push	r28
+ 74c:	df 93       	push	r29
+ 74e:	ec 01       	movw	r28, r24
+  while (pgm_read_byte(&(*string)))
+ 750:	fc 01       	movw	r30, r24
+ 752:	84 91       	lpm	r24, Z
+ 754:	88 23       	and	r24, r24
+ 756:	49 f0       	breq	.+18     	; 0x76a <transmitString_F+0x20>
+ 758:	fe 01       	movw	r30, r28
+   transmitByte(pgm_read_byte(&(*string++)));
+ 75a:	21 96       	adiw	r28, 0x01	; 1
+ 75c:	84 91       	lpm	r24, Z
+ 75e:	0e 94 a1 03 	call	0x742	; 0x742 <transmitByte>
+//***************************************************
+//Function to transmit a string in Flash
+//***************************************************
+void transmitString_F(char* string)
+{
+  while (pgm_read_byte(&(*string)))
+ 762:	fe 01       	movw	r30, r28
+ 764:	84 91       	lpm	r24, Z
+ 766:	81 11       	cpse	r24, r1
+ 768:	f7 cf       	rjmp	.-18     	; 0x758 <transmitString_F+0xe>
+   transmitByte(pgm_read_byte(&(*string++)));
+}
+ 76a:	df 91       	pop	r29
+ 76c:	cf 91       	pop	r28
+ 76e:	08 95       	ret
+
+00000770 <transmitString>:
+
+//***************************************************
+//Function to transmit a string in RAM
+//***************************************************
+void transmitString(unsigned char* string)
+{
+ 770:	cf 93       	push	r28
+ 772:	df 93       	push	r29
+ 774:	ec 01       	movw	r28, r24
+  while (*string)
+ 776:	88 81       	ld	r24, Y
+ 778:	88 23       	and	r24, r24
+ 77a:	31 f0       	breq	.+12     	; 0x788 <transmitString+0x18>
+ 77c:	21 96       	adiw	r28, 0x01	; 1
+   transmitByte(*string++);
+ 77e:	0e 94 a1 03 	call	0x742	; 0x742 <transmitByte>
+//***************************************************
+//Function to transmit a string in RAM
+//***************************************************
+void transmitString(unsigned char* string)
+{
+  while (*string)
+ 782:	89 91       	ld	r24, Y+
+ 784:	81 11       	cpse	r24, r1
+ 786:	fb cf       	rjmp	.-10     	; 0x77e <transmitString+0xe>
+   transmitByte(*string++);
+}
+ 788:	df 91       	pop	r29
+ 78a:	cf 91       	pop	r28
+ 78c:	08 95       	ret
+
+0000078e <malloc>:
+ 78e:	cf 93       	push	r28
+ 790:	df 93       	push	r29
+ 792:	82 30       	cpi	r24, 0x02	; 2
+ 794:	91 05       	cpc	r25, r1
+ 796:	10 f4       	brcc	.+4      	; 0x79c <malloc+0xe>
+ 798:	82 e0       	ldi	r24, 0x02	; 2
+ 79a:	90 e0       	ldi	r25, 0x00	; 0
+ 79c:	e0 91 0c 03 	lds	r30, 0x030C
+ 7a0:	f0 91 0d 03 	lds	r31, 0x030D
+ 7a4:	20 e0       	ldi	r18, 0x00	; 0
+ 7a6:	30 e0       	ldi	r19, 0x00	; 0
+ 7a8:	c0 e0       	ldi	r28, 0x00	; 0
+ 7aa:	d0 e0       	ldi	r29, 0x00	; 0
+ 7ac:	30 97       	sbiw	r30, 0x00	; 0
+ 7ae:	11 f1       	breq	.+68     	; 0x7f4 <malloc+0x66>
+ 7b0:	40 81       	ld	r20, Z
+ 7b2:	51 81       	ldd	r21, Z+1	; 0x01
+ 7b4:	48 17       	cp	r20, r24
+ 7b6:	59 07       	cpc	r21, r25
+ 7b8:	c0 f0       	brcs	.+48     	; 0x7ea <malloc+0x5c>
+ 7ba:	48 17       	cp	r20, r24
+ 7bc:	59 07       	cpc	r21, r25
+ 7be:	61 f4       	brne	.+24     	; 0x7d8 <malloc+0x4a>
+ 7c0:	82 81       	ldd	r24, Z+2	; 0x02
+ 7c2:	93 81       	ldd	r25, Z+3	; 0x03
+ 7c4:	20 97       	sbiw	r28, 0x00	; 0
+ 7c6:	19 f0       	breq	.+6      	; 0x7ce <malloc+0x40>
+ 7c8:	9b 83       	std	Y+3, r25	; 0x03
+ 7ca:	8a 83       	std	Y+2, r24	; 0x02
+ 7cc:	2b c0       	rjmp	.+86     	; 0x824 <malloc+0x96>
+ 7ce:	90 93 0d 03 	sts	0x030D, r25
+ 7d2:	80 93 0c 03 	sts	0x030C, r24
+ 7d6:	26 c0       	rjmp	.+76     	; 0x824 <malloc+0x96>
+ 7d8:	21 15       	cp	r18, r1
+ 7da:	31 05       	cpc	r19, r1
+ 7dc:	19 f0       	breq	.+6      	; 0x7e4 <malloc+0x56>
+ 7de:	42 17       	cp	r20, r18
+ 7e0:	53 07       	cpc	r21, r19
+ 7e2:	18 f4       	brcc	.+6      	; 0x7ea <malloc+0x5c>
+ 7e4:	9a 01       	movw	r18, r20
+ 7e6:	be 01       	movw	r22, r28
+ 7e8:	df 01       	movw	r26, r30
+ 7ea:	ef 01       	movw	r28, r30
+ 7ec:	02 80       	ldd	r0, Z+2	; 0x02
+ 7ee:	f3 81       	ldd	r31, Z+3	; 0x03
+ 7f0:	e0 2d       	mov	r30, r0
+ 7f2:	dc cf       	rjmp	.-72     	; 0x7ac <malloc+0x1e>
+ 7f4:	21 15       	cp	r18, r1
+ 7f6:	31 05       	cpc	r19, r1
+ 7f8:	09 f1       	breq	.+66     	; 0x83c <malloc+0xae>
+ 7fa:	28 1b       	sub	r18, r24
+ 7fc:	39 0b       	sbc	r19, r25
+ 7fe:	24 30       	cpi	r18, 0x04	; 4
+ 800:	31 05       	cpc	r19, r1
+ 802:	90 f4       	brcc	.+36     	; 0x828 <malloc+0x9a>
+ 804:	12 96       	adiw	r26, 0x02	; 2
+ 806:	8d 91       	ld	r24, X+
+ 808:	9c 91       	ld	r25, X
+ 80a:	13 97       	sbiw	r26, 0x03	; 3
+ 80c:	61 15       	cp	r22, r1
+ 80e:	71 05       	cpc	r23, r1
+ 810:	21 f0       	breq	.+8      	; 0x81a <malloc+0x8c>
+ 812:	fb 01       	movw	r30, r22
+ 814:	93 83       	std	Z+3, r25	; 0x03
+ 816:	82 83       	std	Z+2, r24	; 0x02
+ 818:	04 c0       	rjmp	.+8      	; 0x822 <malloc+0x94>
+ 81a:	90 93 0d 03 	sts	0x030D, r25
+ 81e:	80 93 0c 03 	sts	0x030C, r24
+ 822:	fd 01       	movw	r30, r26
+ 824:	32 96       	adiw	r30, 0x02	; 2
+ 826:	44 c0       	rjmp	.+136    	; 0x8b0 <__stack+0x51>
+ 828:	fd 01       	movw	r30, r26
+ 82a:	e2 0f       	add	r30, r18
+ 82c:	f3 1f       	adc	r31, r19
+ 82e:	81 93       	st	Z+, r24
+ 830:	91 93       	st	Z+, r25
+ 832:	22 50       	subi	r18, 0x02	; 2
+ 834:	31 09       	sbc	r19, r1
+ 836:	2d 93       	st	X+, r18
+ 838:	3c 93       	st	X, r19
+ 83a:	3a c0       	rjmp	.+116    	; 0x8b0 <__stack+0x51>
+ 83c:	20 91 0a 03 	lds	r18, 0x030A
+ 840:	30 91 0b 03 	lds	r19, 0x030B
+ 844:	23 2b       	or	r18, r19
+ 846:	41 f4       	brne	.+16     	; 0x858 <malloc+0xca>
+ 848:	20 91 62 00 	lds	r18, 0x0062
+ 84c:	30 91 63 00 	lds	r19, 0x0063
+ 850:	30 93 0b 03 	sts	0x030B, r19
+ 854:	20 93 0a 03 	sts	0x030A, r18
+ 858:	20 91 60 00 	lds	r18, 0x0060
+ 85c:	30 91 61 00 	lds	r19, 0x0061
+ 860:	21 15       	cp	r18, r1
+ 862:	31 05       	cpc	r19, r1
+ 864:	41 f4       	brne	.+16     	; 0x876 <__stack+0x17>
+ 866:	2d b7       	in	r18, 0x3d	; 61
+ 868:	3e b7       	in	r19, 0x3e	; 62
+ 86a:	40 91 64 00 	lds	r20, 0x0064
+ 86e:	50 91 65 00 	lds	r21, 0x0065
+ 872:	24 1b       	sub	r18, r20
+ 874:	35 0b       	sbc	r19, r21
+ 876:	e0 91 0a 03 	lds	r30, 0x030A
+ 87a:	f0 91 0b 03 	lds	r31, 0x030B
+ 87e:	e2 17       	cp	r30, r18
+ 880:	f3 07       	cpc	r31, r19
+ 882:	a0 f4       	brcc	.+40     	; 0x8ac <__stack+0x4d>
+ 884:	2e 1b       	sub	r18, r30
+ 886:	3f 0b       	sbc	r19, r31
+ 888:	28 17       	cp	r18, r24
+ 88a:	39 07       	cpc	r19, r25
+ 88c:	78 f0       	brcs	.+30     	; 0x8ac <__stack+0x4d>
+ 88e:	ac 01       	movw	r20, r24
+ 890:	4e 5f       	subi	r20, 0xFE	; 254
+ 892:	5f 4f       	sbci	r21, 0xFF	; 255
+ 894:	24 17       	cp	r18, r20
+ 896:	35 07       	cpc	r19, r21
+ 898:	48 f0       	brcs	.+18     	; 0x8ac <__stack+0x4d>
+ 89a:	4e 0f       	add	r20, r30
+ 89c:	5f 1f       	adc	r21, r31
+ 89e:	50 93 0b 03 	sts	0x030B, r21
+ 8a2:	40 93 0a 03 	sts	0x030A, r20
+ 8a6:	81 93       	st	Z+, r24
+ 8a8:	91 93       	st	Z+, r25
+ 8aa:	02 c0       	rjmp	.+4      	; 0x8b0 <__stack+0x51>
+ 8ac:	e0 e0       	ldi	r30, 0x00	; 0
+ 8ae:	f0 e0       	ldi	r31, 0x00	; 0
+ 8b0:	cf 01       	movw	r24, r30
+ 8b2:	df 91       	pop	r29
+ 8b4:	cf 91       	pop	r28
+ 8b6:	08 95       	ret
+
+000008b8 <free>:
+ 8b8:	0f 93       	push	r16
+ 8ba:	1f 93       	push	r17
+ 8bc:	cf 93       	push	r28
+ 8be:	df 93       	push	r29
+ 8c0:	00 97       	sbiw	r24, 0x00	; 0
+ 8c2:	09 f4       	brne	.+2      	; 0x8c6 <free+0xe>
+ 8c4:	8c c0       	rjmp	.+280    	; 0x9de <free+0x126>
+ 8c6:	fc 01       	movw	r30, r24
+ 8c8:	32 97       	sbiw	r30, 0x02	; 2
+ 8ca:	13 82       	std	Z+3, r1	; 0x03
+ 8cc:	12 82       	std	Z+2, r1	; 0x02
+ 8ce:	00 91 0c 03 	lds	r16, 0x030C
+ 8d2:	10 91 0d 03 	lds	r17, 0x030D
+ 8d6:	01 15       	cp	r16, r1
+ 8d8:	11 05       	cpc	r17, r1
+ 8da:	81 f4       	brne	.+32     	; 0x8fc <free+0x44>
+ 8dc:	20 81       	ld	r18, Z
+ 8de:	31 81       	ldd	r19, Z+1	; 0x01
+ 8e0:	82 0f       	add	r24, r18
+ 8e2:	93 1f       	adc	r25, r19
+ 8e4:	20 91 0a 03 	lds	r18, 0x030A
+ 8e8:	30 91 0b 03 	lds	r19, 0x030B
+ 8ec:	28 17       	cp	r18, r24
+ 8ee:	39 07       	cpc	r19, r25
+ 8f0:	79 f5       	brne	.+94     	; 0x950 <free+0x98>
+ 8f2:	f0 93 0b 03 	sts	0x030B, r31
+ 8f6:	e0 93 0a 03 	sts	0x030A, r30
+ 8fa:	71 c0       	rjmp	.+226    	; 0x9de <free+0x126>
+ 8fc:	d8 01       	movw	r26, r16
+ 8fe:	40 e0       	ldi	r20, 0x00	; 0
+ 900:	50 e0       	ldi	r21, 0x00	; 0
+ 902:	ae 17       	cp	r26, r30
+ 904:	bf 07       	cpc	r27, r31
+ 906:	50 f4       	brcc	.+20     	; 0x91c <free+0x64>
+ 908:	12 96       	adiw	r26, 0x02	; 2
+ 90a:	2d 91       	ld	r18, X+
+ 90c:	3c 91       	ld	r19, X
+ 90e:	13 97       	sbiw	r26, 0x03	; 3
+ 910:	ad 01       	movw	r20, r26
+ 912:	21 15       	cp	r18, r1
+ 914:	31 05       	cpc	r19, r1
+ 916:	09 f1       	breq	.+66     	; 0x95a <free+0xa2>
+ 918:	d9 01       	movw	r26, r18
+ 91a:	f3 cf       	rjmp	.-26     	; 0x902 <free+0x4a>
+ 91c:	9d 01       	movw	r18, r26
+ 91e:	da 01       	movw	r26, r20
+ 920:	33 83       	std	Z+3, r19	; 0x03
+ 922:	22 83       	std	Z+2, r18	; 0x02
+ 924:	60 81       	ld	r22, Z
+ 926:	71 81       	ldd	r23, Z+1	; 0x01
+ 928:	86 0f       	add	r24, r22
+ 92a:	97 1f       	adc	r25, r23
+ 92c:	82 17       	cp	r24, r18
+ 92e:	93 07       	cpc	r25, r19
+ 930:	69 f4       	brne	.+26     	; 0x94c <free+0x94>
+ 932:	ec 01       	movw	r28, r24
+ 934:	28 81       	ld	r18, Y
+ 936:	39 81       	ldd	r19, Y+1	; 0x01
+ 938:	26 0f       	add	r18, r22
+ 93a:	37 1f       	adc	r19, r23
+ 93c:	2e 5f       	subi	r18, 0xFE	; 254
+ 93e:	3f 4f       	sbci	r19, 0xFF	; 255
+ 940:	31 83       	std	Z+1, r19	; 0x01
+ 942:	20 83       	st	Z, r18
+ 944:	8a 81       	ldd	r24, Y+2	; 0x02
+ 946:	9b 81       	ldd	r25, Y+3	; 0x03
+ 948:	93 83       	std	Z+3, r25	; 0x03
+ 94a:	82 83       	std	Z+2, r24	; 0x02
+ 94c:	45 2b       	or	r20, r21
+ 94e:	29 f4       	brne	.+10     	; 0x95a <free+0xa2>
+ 950:	f0 93 0d 03 	sts	0x030D, r31
+ 954:	e0 93 0c 03 	sts	0x030C, r30
+ 958:	42 c0       	rjmp	.+132    	; 0x9de <free+0x126>
+ 95a:	13 96       	adiw	r26, 0x03	; 3
+ 95c:	fc 93       	st	X, r31
+ 95e:	ee 93       	st	-X, r30
+ 960:	12 97       	sbiw	r26, 0x02	; 2
+ 962:	ed 01       	movw	r28, r26
+ 964:	49 91       	ld	r20, Y+
+ 966:	59 91       	ld	r21, Y+
+ 968:	9e 01       	movw	r18, r28
+ 96a:	24 0f       	add	r18, r20
+ 96c:	35 1f       	adc	r19, r21
+ 96e:	e2 17       	cp	r30, r18
+ 970:	f3 07       	cpc	r31, r19
+ 972:	71 f4       	brne	.+28     	; 0x990 <free+0xd8>
+ 974:	80 81       	ld	r24, Z
+ 976:	91 81       	ldd	r25, Z+1	; 0x01
+ 978:	84 0f       	add	r24, r20
+ 97a:	95 1f       	adc	r25, r21
+ 97c:	02 96       	adiw	r24, 0x02	; 2
+ 97e:	11 96       	adiw	r26, 0x01	; 1
+ 980:	9c 93       	st	X, r25
+ 982:	8e 93       	st	-X, r24
+ 984:	82 81       	ldd	r24, Z+2	; 0x02
+ 986:	93 81       	ldd	r25, Z+3	; 0x03
+ 988:	13 96       	adiw	r26, 0x03	; 3
+ 98a:	9c 93       	st	X, r25
+ 98c:	8e 93       	st	-X, r24
+ 98e:	12 97       	sbiw	r26, 0x02	; 2
+ 990:	e0 e0       	ldi	r30, 0x00	; 0
+ 992:	f0 e0       	ldi	r31, 0x00	; 0
+ 994:	d8 01       	movw	r26, r16
+ 996:	12 96       	adiw	r26, 0x02	; 2
+ 998:	8d 91       	ld	r24, X+
+ 99a:	9c 91       	ld	r25, X
+ 99c:	13 97       	sbiw	r26, 0x03	; 3
+ 99e:	00 97       	sbiw	r24, 0x00	; 0
+ 9a0:	19 f0       	breq	.+6      	; 0x9a8 <free+0xf0>
+ 9a2:	f8 01       	movw	r30, r16
+ 9a4:	8c 01       	movw	r16, r24
+ 9a6:	f6 cf       	rjmp	.-20     	; 0x994 <free+0xdc>
+ 9a8:	8d 91       	ld	r24, X+
+ 9aa:	9c 91       	ld	r25, X
+ 9ac:	98 01       	movw	r18, r16
+ 9ae:	2e 5f       	subi	r18, 0xFE	; 254
+ 9b0:	3f 4f       	sbci	r19, 0xFF	; 255
+ 9b2:	82 0f       	add	r24, r18
+ 9b4:	93 1f       	adc	r25, r19
+ 9b6:	20 91 0a 03 	lds	r18, 0x030A
+ 9ba:	30 91 0b 03 	lds	r19, 0x030B
+ 9be:	28 17       	cp	r18, r24
+ 9c0:	39 07       	cpc	r19, r25
+ 9c2:	69 f4       	brne	.+26     	; 0x9de <free+0x126>
+ 9c4:	30 97       	sbiw	r30, 0x00	; 0
+ 9c6:	29 f4       	brne	.+10     	; 0x9d2 <free+0x11a>
+ 9c8:	10 92 0d 03 	sts	0x030D, r1
+ 9cc:	10 92 0c 03 	sts	0x030C, r1
+ 9d0:	02 c0       	rjmp	.+4      	; 0x9d6 <free+0x11e>
+ 9d2:	13 82       	std	Z+3, r1	; 0x03
+ 9d4:	12 82       	std	Z+2, r1	; 0x02
+ 9d6:	10 93 0b 03 	sts	0x030B, r17
+ 9da:	00 93 0a 03 	sts	0x030A, r16
+ 9de:	df 91       	pop	r29
+ 9e0:	cf 91       	pop	r28
+ 9e2:	1f 91       	pop	r17
+ 9e4:	0f 91       	pop	r16
+ 9e6:	08 95       	ret
+
+000009e8 <_exit>:
+ 9e8:	f8 94       	cli
+
+000009ea <__stop_program>:
+ 9ea:	ff cf       	rjmp	.-2      	; 0x9ea <__stop_program>
